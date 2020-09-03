@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Enter Your Information</title>
+{% endblock %}
+
+{% block body %}
+<br>
+
+<h1>Enter Your Information</h1>
+<hr style="border: 4px solid#5b9aa0;" />
+<div class="form-group">
+    <form action="intro/" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="btn btn-primary" href="{/intro }" value="Next" type="submit">
+    </form>
+    <br>
+</div>
+{% endblock%}

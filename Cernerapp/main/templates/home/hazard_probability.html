@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Emergency Prepardeness</title>
+{% endblock %}
+
+{% block body %}
+<h1>Emergency Prepardeness</h1>
+<hr style="border: 4px solid#5b9aa0;" />
+<form action="/results/" method="POST">
+	{% csrf_token %}
+    <h3>Please rank the probability you think this will occur to your current residence/household, here, in the next two years</h3>
+    <h5>1. Extremely Unlikely</h5>
+    <h5>2. Not Likely</h5>
+    <h5>3. Somewhat likely</h5>
+    <h5>4. More than likely</h5>
+    <h5>5. Very likely</h5>
+	<table class="responsive-table-input-matrix">
+			<thead>
+			<tr>
+				<th></th>
+				<th>Extremely Unlikely</th>
+				<th>Not Likely</th>
+				<th>Somewhat likely</th>
+				<th>More than likely</th>
+				<th>Very likely</th>
+			</tr>
+			</thead>
+			<tbody>
+			{%for question in questions %}
+			<tr>
+				<td>{{question}}</td>
+				<td><input type="radio" name = '{{question}}' value="1"></td>
+				<td><input type="radio" name = '{{question}}' value="2"></td>
+				<td><input type="radio" name = '{{question}}' value="3"></td>
+				<td><input type="radio" name = '{{question}}' value="4"></td>
+				<td><input type="radio" name = '{{question}}' value="5"></td>
+			</tr>
+			{%endfor%}
+			</tbody>
+		</table>
+
+	<a class="btn btn-danger" href='/hazard_continued'>Back</a>
+    <input class="btn btn-primary" href='{/results}' value="Results" type="submit">
+	<br>
+	<br>
+	</form>
+<br>
+
+
+
+{% endblock%}

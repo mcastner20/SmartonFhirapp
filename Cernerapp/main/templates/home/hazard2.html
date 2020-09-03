@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Emergency Prepardeness</title>
+{% endblock %}
+
+{% block body %}
+<br>
+
+<h1>Emergency Prepardeness</h1>
+<hr style="border: 4px solid#5b9aa0;" />
+<form action="/hazard_continued/" method="POST">
+    {% csrf_token %}
+    <h3>In your lifetime have you ever been directly impacted by:</h3>
+    <hr style="border: 1px solid#d9d9d9;" />
+
+    {%for question, hazard in mylist %}
+
+    <h6>{{question}}</h6>
+
+    <input type="radio" name="{{question}}" value="Yes"{% if hazard == True %}checked{% endif %}>Yes<BR>
+    <input type="radio" name="{{question}}" value="No"{% if hazard == False %}checked{% endif %}>No<BR>
+
+    <br>
+
+    {%endfor%}
+
+
+
+
+    <a class="btn btn-danger" href='/demographic'>Back</a>
+    <input class="btn btn-primary" href='{/hazard_continued}' type="submit" value="Next">
+</form>
+
+{% endblock%}

@@ -1,0 +1,252 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Emergency Prepardeness</title>
+{% endblock %}
+
+{% block body %}
+<br>
+
+<h1>Emergency Prepardeness</h1>
+<hr style="border: 4px solid#5b9aa0;" />
+<form action="/hazard_continued" method="POST">
+
+    <h3>In your lifetime have you ever been directly impacted by:</h3>
+    <hr style="border: 1px solid#d9d9d9;" />
+    <h6>Active Shooter</h6>
+    <input type="radio" name="34" value="Yes">Yes<BR>
+    <input type="radio" name="34" value="No">No<BR>
+    <br>
+    <h6>Acts of Intent</h6>
+    <input type="radio" name="35" value="Yes">Yes<BR>
+    <input type="radio" name="35" value="No">No<BR>
+    <br>
+    <h6>Bomb Threat</h6>
+    <input type="radio" name="36" value="36a">Yes<BR>
+    <input type="radio" name="36" value="36b">No<BR>
+    <br>
+    <h6>Building Move</h6>
+    <input type="radio" name="37" value="37a">Yes<BR>
+    <input type="radio" name="37" value="37b">No<BR>
+    <br>
+    <h6>Chemical Exposure, External</h6>
+    <input type="radio" name="38" value="38a">Yes<BR>
+    <input type="radio" name="38" value="38b">No<BR>
+    <br>
+    <h6>Civil Unrest in the neighborhood of your apartment or home</h6>
+    <input type="radio" name="39" value="39a">Yes<BR>
+    <input type="radio" name="39" value="39b">No<BR>
+    <br>
+    <h6>Communication/Telephone Failure</h6>
+    <input type="radio" name="40" value="40a">Yes<BR>
+    <input type="radio" name="40" value="40b">No<BR>
+    <br>
+    <h6>Dam Failure</h6>
+    <input type="radio" name="41" value="41a">Yes<BR>
+    <input type="radio" name="41" value="41b">No<BR>
+    <br>
+    <h6>Drought</h6>
+    <input type="radio" name="42" value="42a">Yes<BR>
+    <input type="radio" name="42" value="42b">No<BR>
+    <br>
+    <h6>Earthquake</h6>
+    <input type="radio" name="43" value="43a">Yes<BR>
+    <input type="radio" name="43" value="43b">No<BR>
+    <br>
+    <h6>Epidemic</h6>
+    <input type="radio" name="44" value="44a">Yes<BR>
+    <input type="radio" name="44" value="44b">No<BR>
+    <br><h6>Evacuation</h6>
+    <input type="radio" name="45" value="45a">Yes<BR>
+    <input type="radio" name="45" value="45b">No<BR>
+    <br><h6>Explosion</h6>
+    <input type="radio" name="46" value="46a">Yes<BR>
+    <input type="radio" name="46" value="46b">No<BR>
+    <br><h6>External Flood</h6>
+    <input type="radio" name="47" value="47a">Yes<BR>
+    <input type="radio" name="47" value="47b">No<BR>
+    <br><h6>Fire</h6>
+    <input type="radio" name="48" value="48a">Yes<BR>
+    <input type="radio" name="48" value="48b">No<BR>
+    <br>
+    <h6>Flood</h6>
+    <input type="radio" name="49" value="49a">Yes<BR>
+    <input type="radio" name="49" value="49b">No<BR>
+    <br>
+    <h6>Prisoner, house arrest prisoner, or escaped prisoner in the home or department</h6>
+    <input type="radio" name="50" value="50a">Yes<BR>
+    <input type="radio" name="50" value="50b">No<BR>
+    <br>
+    <h6>Gas/Emissions Leak</h6>
+    <input type="radio" name="51" value="51a">Yes<BR>
+    <input type="radio" name="51" value="51b">No<BR>
+    <br>
+    <h6>Generator Failure or No availability for Rent/Purchase in Power Outage</h6>
+    <input type="radio" name="52" value="52a">Yes<BR>
+    <input type="radio" name="52" value="52b">No<BR>
+    <br>
+    <h6>Hazmat Incident</h6>
+    <input type="radio" name="53" value="53a">Yes<BR>
+    <input type="radio" name="53" value="53b">No<BR>
+    <br>
+    <h6>Hazmat Incident with Mass Casualties</h6>
+    <input type="radio" name="54" value="54a">Yes<BR>
+    <input type="radio" name="54" value="54b">No<BR>
+    <br>
+    <h6>Hostage Situation</h6>
+    <input type="radio" name="55" value="55a">Yes<BR>
+    <input type="radio" name="55" value="55b">No<BR>
+    <br>
+    <h6>Hurricane</h6>
+    <input type="radio" name="56" value="56a">Yes<BR>
+    <input type="radio" name="56" value="56b">No<BR>
+    <br>
+    <h6>HVAC Failure</h6>
+    <input type="radio" name="57" value="57a">Yes<BR>
+    <input type="radio" name="57" value="57b">No<BR>
+    <br>
+    <h6>Inclement Weather</h6>
+    <input type="radio" name="58" value="58a">Yes<BR>
+    <input type="radio" name="58" value="58b">No<BR>
+    <br>
+    <h6>Infectious Disease Outbreak</h6>
+    <input type="radio" name="59" value="59a">Yes<BR>
+    <input type="radio" name="59" value="59b">No<BR>
+    <br>
+    <h6>Internal Fire</h6>
+    <input type="radio" name="60" value="60a">Yes<BR>
+    <input type="radio" name="60" value="60b">No<BR>
+    <br>
+    <h6>Internal Flood</h6>
+    <input type="radio" name="61" value="61a">Yes<BR>
+    <input type="radio" name="61" value="61b">No<BR>
+    <br>
+    <h6>IT System Outage</h6>
+    <input type="radio" name="62" value="62a">Yes<BR>
+    <input type="radio" name="62" value="62b">No<BR>
+    <br>
+    <h6>Landslide</h6>
+    <input type="radio" name="63" value="63a">Yes<BR>
+    <input type="radio" name="63" value="63b">No<BR>
+    <br>
+    <h6>Large Internal Spill</h6>
+    <input type="radio" name="64" value="64a">Yes<BR>
+    <input type="radio" name="64" value="64b">No<BR>
+    <br>
+    <h6>Mass Casualty Incident</h6>
+    <input type="radio" name="65" value="65a">Yes<BR>
+    <input type="radio" name="65" value="65b">No<BR>
+    <br>
+    <h6>Natural Gas Disruption</h6>
+    <input type="radio" name="66" value="66a">Yes<BR>
+    <input type="radio" name="66" value="66b">No<BR>
+    <br>
+    <h6>Natural Gas Failure</h6>
+    <input type="radio" name="67" value="67a">Yes<BR>
+    <input type="radio" name="67" value="67b">No<BR>
+    <br>
+    <h6>Other Utility Failure</h6>
+    <input type="radio" name="68" value="68a">Yes<BR>
+    <input type="radio" name="68" value="68b">No<BR>
+    <br>
+    <h6>Pandemic</h6>
+    <input type="radio" name="69" value="69a">Yes<BR>
+    <input type="radio" name="69" value="69b">No<BR>
+    <br>
+    <h6>Everyone in Household requiring Hospitalization at the same time</h6>
+    <input type="radio" name="70" value="70a">Yes<BR>
+    <input type="radio" name="70" value="70b">No<BR>
+    <br>
+    <h6>Picketing</h6>
+    <input type="radio" name="71" value="71a">Yes<BR>
+    <input type="radio" name="71" value="71b">No<BR>
+    <br>
+    <h6>Planned Power Outages</h6>
+    <input type="radio" name="72" value="72a">Yes<BR>
+    <input type="radio" name="72" value="72b">No<BR>
+    <br>
+    <h6>Radiation Exposure</h6>
+    <input type="radio" name="73" value="73a">Yes<BR>
+    <input type="radio" name="73" value="73b">No<BR>
+    <br>
+    <h6>Seasonal Influenza</h6>
+    <input type="radio" name="74" value="74a">Yes<BR>
+    <input type="radio" name="74" value="74b">No<BR>
+    <br>
+    <h6>Sewer Failure</h6>
+    <input type="radio" name="75" value="75a">Yes<BR>
+    <input type="radio" name="75" value="75b">No<BR>
+    <br>
+    <h6>Shelter in Place</h6>
+    <input type="radio" name="76" value="76a">Yes<BR>
+    <input type="radio" name="76" value="76b">No<BR>
+    <br>
+    <h6>Strikes/Labor Action/Work Stoppage</h6>
+    <input type="radio" name="77" value="77a">Yes<BR>
+    <input type="radio" name="77" value="77b">No<BR>
+    <br>
+    <h6>Suicide</h6>
+    <input type="radio" name="78" value="78a">Yes<BR>
+    <input type="radio" name="78" value="78b">No<BR>
+    <br>
+    <h6>Supply Chain Shortage / Failure at LocalShopping Stores, including Grocery</h6>
+    <input type="radio" name="79" value="79a">Yes<BR>
+    <input type="radio" name="79" value="79b">No<BR>
+    <br>
+    <h6>Suspicious Odor</h6>
+    <input type="radio" name="80" value="80a">Yes<BR>
+    <input type="radio" name="80" value="80b">No<BR>
+    <br>
+    <h6>Suspicious Package/Substance</h6>
+    <input type="radio" name="81" value="81a">Yes<BR>
+    <input type="radio" name="81" value="81b">No<BR>
+    <br>
+    <h6>Temperature Extremes</h6>
+    <input type="radio" name="82" value="82a">Yes<BR>
+    <input type="radio" name="82" value="82b">No<BR>
+    <br>
+    <h6>Tornado</h6>
+    <input type="radio" name="83" value="83a">Yes<BR>
+    <input type="radio" name="83" value="83b">No<BR>
+    <br>
+    <h6>Transportation Failure</h6>
+    <input type="radio" name="84" value="84a">Yes<BR>
+    <input type="radio" name="84" value="84b">No<BR>
+    <br>
+    <h6>Trauma</h6>
+    <input type="radio" name="85" value="85a">Yes<BR>
+    <input type="radio" name="85" value="85b">No<BR>
+    <br>
+    <h6>Tsunami</h6>
+    <input type="radio" name="86" value="86a">Yes<BR>
+    <input type="radio" name="86" value="86b">No<BR>
+    <br>
+    <h6>VIP Situation</h6>
+    <input type="radio" name="87" value="87a">Yes<BR>
+    <input type="radio" name="87" value="87b">No<BR>
+    <br>
+    <h6>Water Contamination</h6>
+    <input type="radio" name="88" value="88a">Yes<BR>
+    <input type="radio" name="88" value="88b">No<BR>
+    <br>
+    <h6>Water Disruption</h6>
+    <input type="radio" name="89" value="89a">Yes<BR>
+    <input type="radio" name="89" value="89b">No<BR>
+    <br>
+    <h6>Weapon</h6>
+    <input type="radio" name="90" value="90a">Yes<BR>
+    <input type="radio" name="90" value="90b">No<BR>
+    <br>
+    <h6>Violence/Threat</h6>
+    <input type="radio" name="91" value="91a">Yes<BR>
+    <input type="radio" name="91" value="91b">No<BR>
+    <br>
+    <h6>Other</h6>
+    <input type="radio" name="92" value="92a">Yes<BR>
+    <input type="radio" name="92" value="92b">No<BR>
+    <br>
+
+
+    <input type='submit' value='Next'>
+</form>
+
+{% endblock%}

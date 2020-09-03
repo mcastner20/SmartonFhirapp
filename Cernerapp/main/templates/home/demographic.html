@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Demographic Information</title>
+{% endblock %}
+
+{% block body %}
+
+<br>
+
+<h1>Demographic Information</h1>
+<hr style="border: 4px solid#5b9aa0;" />
+<form action="/hazard2/" method="POST">
+    {% csrf_token %}
+    <h6>Have you ever served in the US military?</h6>
+    <input type="radio" name="26" value="26a"{% if demographics.q26 == 'a' %}checked{% endif %}>Yes, Active Duty<BR>
+    <input type="radio" name="26" value="26b"{% if demographics.q26 == 'b' %}checked{% endif %}>Yes, Reserve or National Guard<BR>
+    <input type="radio" name="26" value="26c"{% if demographics.q26 == 'c' %}checked{% endif %}>Yes, both<BR>
+    <input type="radio" name="26" value="26d"{% if demographics.q26 == 'd' %}checked{% endif %}>No<BR>
+    <br>
+    <h6>Have members of your household ever served in the US military?</h6>
+    <input type="radio" name="27" value="27a"{% if demographics.q27 == 'a' %}checked{% endif %}>Yes, Active Duty<BR>
+    <input type="radio" name="27" value="27b"{% if demographics.q27 == 'b' %}checked{% endif %}>Yes, Reserve or National Guard<BR>
+    <input type="radio" name="27" value="27c"{% if demographics.q27 == 'c' %}checked{% endif %}>Yes, both<BR>
+    <input type="radio" name="27" value="27d"{% if demographics.q27 == 'd' %}checked{% endif %}>No<BR>
+    <br>
+    <h6>What race do you identify with (check all that apply)?</h6>
+    <input type="checkbox" id="28" name="28" value="True"{% if demographics.q28a == True %}checked{% endif %}>
+    <label for="28">American Indian/Alaskan Native</label><br>
+    <input type="checkbox" id="29" name="29" value="True"{% if demographics.q28b == True %}checked{% endif %}>
+    <label for="29">Asian</label><br>
+    <input type="checkbox" id="30" name="30" value="True"{% if demographics.q28c == True %}checked{% endif %}>
+    <label for="30">Black or african American</label><br>
+    <input type="checkbox" id="31" name="31" value="True"{% if demographics.q28d == True %}checked{% endif %}>
+    <label for="31">White/Caucasian</label><br>
+    <input type="checkbox" id="32" name="32" value="True"{% if demographics.q28e == True %}checked{% endif %}>
+    <label for="32">Native Hawaiian or other Pacific Islander</label><br>
+    <input type="checkbox" id="33" name="33" value="True"{% if demographics.q28f == True %}checked{% endif %}>
+    <label for="33">Don't Know/Unsure </label><br>
+    <br>
+    <h6>What race do members of your household identify with (check all that apply)?</h6>
+    <input type="checkbox" id="34" name="34" value="True"{% if demographics.q29a == True %}checked{% endif %}>
+    <label for="34">American Indian/Alaskan Native</label><br>
+    <input type="checkbox" id="35" name="35" value="True"{% if demographics.q29b == True %}checked{% endif %}>
+    <label for="35">Asian</label><br>
+    <input type="checkbox" id="36" name="36" value="True"{% if demographics.q29c == True %}checked{% endif %}>
+    <label for="36">Black or african American</label><br>
+    <input type="checkbox" id="37" name="37" value="True"{% if demographics.q29d == True %}checked{% endif %}>
+    <label for="37">White/Caucasian</label><br>
+    <input type="checkbox" id="38" name="38" value="True"{% if demographics.q29e == True %}checked{% endif %}>
+    <label for="38">Native Hawaiian or other Pacific Islander</label><br>
+    <input type="checkbox" id="39" name="39" value="True"{% if demographics.q29f == True %}checked{% endif %}>
+    <label for="39">Don't Know/Unsure </label><br>
+    <br>
+    <h6>What is the highest level of education you have completed? Choose the best answer:</h6>
+    <input type="radio" name="40" value="40a"{% if demographics.q30 == 'a' %}checked{% endif %}>Less than high school completion/diploma<BR>
+    <input type="radio" name="40" value="40b"{% if demographics.q30 == 'b' %}checked{% endif %}>High school degree/GED/or equivalent<BR>
+    <input type="radio" name="40" value="40c"{% if demographics.q30 == 'c' %}checked{% endif %}>Some college, no degree<BR>
+    <input type="radio" name="40" value="40d"{% if demographics.q30 == 'd' %}checked{% endif %}>Associate's degree<BR>
+    <input type="radio" name="40" value="40e"{% if demographics.q30 == 'e' %}checked{% endif %}>Bachelor's degree<BR>
+    <input type="radio" name="40" value="40f"{% if demographics.q30 == 'f' %}checked{% endif %}>Master's doctorate, or professional degree<BR>
+    <br>
+    <h6>How often in the past 12 months would you say your household was worried or stressed about having enough money to buy nutritious meals?</h6>
+    <input type="radio" name="41" value="41a"{% if demographics.q31 == 'a' %}checked{% endif %}>Always<BR>
+    <input type="radio" name="41" value="41b"{% if demographics.q31 == 'b' %}checked{% endif %}>Usually<BR>
+    <input type="radio" name="41" value="41c"{% if demographics.q31 == 'c' %}checked{% endif %}>Sometimes<BR>
+    <input type="radio" name="41" value="41d"{% if demographics.q31 == 'd' %}checked{% endif %}>Rarely<BR>
+    <input type="radio" name="41" value="41e"{% if demographics.q31 == 'e' %}checked{% endif %}>Never<BR>
+    <input type="radio" name="41" value="41f"{% if demographics.q31 == 'f' %}checked{% endif %}>Don't know/unsure<BR>
+    <br>
+    <h6>How often in the past 12 months would you say your household was worried or stressed about having enough money to pay your rent/mortgage (or housing expenses like property taxes if your mortgage is paid)?</h6>
+    <input type="radio" name="42" value="42a"{% if demographics.q32 == 'a' %}checked{% endif %}>Always<BR>
+    <input type="radio" name="42" value="42b"{% if demographics.q32 == 'b' %}checked{% endif %}>Usually<BR>
+    <input type="radio" name="42" value="42c"{% if demographics.q32 == 'c' %}checked{% endif %}>Sometimes<BR>
+    <input type="radio" name="42" value="42d"{% if demographics.q32 == 'd' %}checked{% endif %}>Rarely<BR>
+    <input type="radio" name="42" value="42e"{% if demographics.q32 == 'e' %}checked{% endif %}>Never<BR>
+    <input type="radio" name="42" value="42f"{% if demographics.q32 == 'f' %}checked{% endif %}>Don't know/unsure<BR>
+    <br>
+    <h6>Do you or anyone in your household have any of the following (check all that apply)?</h6>
+    <input type="checkbox" id="43" name="43" value="True"{% if demographics.q33a == True %}checked{% endif %}>
+    <label for="43">Impaired hearing</label><br>
+    <input type="checkbox" id="44" name="44" value="True"{% if demographics.q33b == True %}checked{% endif %}>
+    <label for="44">Impaired vision</label><br>
+    <input type="checkbox" id="45" name="45" value="True"{% if demographics.q33c == True %}checked{% endif %}>
+    <label for="45">Developmental/cognitive disability</label><br>
+    <input type="checkbox" id="46" name="46" value="True"{% if demographics.q33d == True %}checked{% endif %}>
+    <label for="46">Difficulty understanding English</label><br>
+    <input type="checkbox" id="47" name="47" value="True"{% if demographics.q33e == True %}checked{% endif %}>
+    <label for="47">Difficulty understanding written material</label><br>
+    <input type="checkbox" id="48" name="48" value="True"{% if demographics.q33f == True %}checked{% endif %}>
+    <label for="48">None of the above</label><br>
+    <input type="checkbox" id="49" name="49" value="True"{% if demographics.q33g == True %}checked{% endif %}>
+    <label for="49">Don't Know/Unsure</label><br>
+    <br>
+     <h6>Do you have a lifeline or special alert system that you wear? OR Do you have an electronic assistant on a device (Siri, Alexa, Cortona, etc.) that will activate first responders or call your emergency contact by voice?</h6>
+    <input type="radio" name="50" value="50a"{% if demographics.q34 == 'a' %}checked{% endif %}>Yes<BR>
+    <input type="radio" name="50" value="50b"{% if demographics.q34 == 'b' %}checked{% endif %}>No<BR>
+    <input type="radio" name="50" value="50c"{% if demographics.q34 == 'c' %}checked{% endif %}>Don't Know/Unsure<BR>
+    <br>
+    <a class="btn btn-danger" href='/disaster'>Back</a>
+    <input class="btn btn-primary" href='{/hazard2}' value="Next" type="submit">
+</form>
+</body>
+{% endblock%}
